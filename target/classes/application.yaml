@@ -1,0 +1,36 @@
+server:
+  port: 7171
+#  servlet:
+#    context-path: /emrtd/api
+
+#certificate:
+#  csca: certificates/30.der
+#  dv: certificates/CNDV00001.cvcert
+#  is: certificates/CNIS00006.cvcert
+#  pk: certificates/CNIS00006.pkcs8
+
+
+certificate:
+  csca: /etc/cert/eid/DS.der
+  dv: /etc/cert/eid/USDVTEST00001.cvcert
+  is: /etc/cert/eid/USISTEST00001.cvcert
+  pk: /etc/cert/eid/USISTEST00001.pkcs8
+
+readerlist:
+  readers: NXP PR533 0|Gemalto SIM Pro Smart Card Reader 0|ACS ACR1281 1S Dual Reader PICC 0|ARH RFIDTKIOSK-RL161043 0|ACS ACR1281 1S Dual Reader ICC 0|Gemalto GemCore SIM Pro Smart Card Read 0|Gemalto USB SmartCard Reader 0
+  samreaders: Gemalto SIM Pro Smart Card Reader 0, 1|Generic EMV Smartcard Reader 0|ACS ACR1281 1S Dual Reader SAM 0
+  fingerscanners: "Suprema BioMini Slim #1|Futronic FS26EU #1|Futronic FS25"
+  cameras: Logitech BRIO|c922 Pro Stream Webcam
+
+biometric:
+  license:
+    host: /local #14.248.80.2
+    port: 5000
+    #components: Biometrics.Standards.Base, Biometrics.Standards.Fingers,Biometrics.Standards.Faces,Biometrics.Standards.Other,Images.LosslessJPEG,Images.JPEG2000,Images.WSQ
+    products: FaceExtractor,FingerExtractor
+  quality:
+    face: 70
+    finger: 60
+
+
+

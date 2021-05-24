@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebSocket example</title>
+    <link href="/webjars/bootstrap/4.4.1/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/application.css" rel="stylesheet">
+    <script src="/webjars/jquery/3.4.1/jquery.js" type="text/javascript"></script>
+    <script src="/js/application.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="container" id="main-content">
+    <div class="row">
+        <div class="col-md-6">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="connect">WebSocket connection:</label>
+                    <button class="btn btn-light" id="connect" type="submit">Connect</button>
+
+
+                    <button class="btn btn-light" disabled="disabled" id="disconnect" type="submit">Disconnect</button>
+
+                </div>
+
+                <div class="form-group">
+                    <button class="btn btn-light" id="connectFinger" type="submit">Connect 2</button>
+                    <button class="btn btn-light" disabled="disabled" id="disconnectFinger" type="submit">Disconnect 2
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <div>
+            <img id="imgDisplayFace" src="imgSourceFace"/>
+            <img id="imgDisplayFinger" src="imgSourceFinger"/>
+        </div>
+
+        <div class="col-md-6">
+            <form class="form-inline">
+                <div class="form-group">
+                    <input class="form-control" id="request" placeholder="" type="text">
+                    <!--                    <video id="myCamera"></video>-->
+
+                </div>
+                <button class="btn btn-light" disabled="disabled" id="send" type="submit">Send</button>
+
+                <button class="btn btn-light" disabled="disabled" id="sendFinger" type="submit">sendFinger</button>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-sm  table-striped" id="conversation">
+                <thead>
+                <tr>
+                    <th>Responses</th>
+                </tr>
+                </thead>
+                <tbody id="responses">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>
